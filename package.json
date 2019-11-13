@@ -9,12 +9,18 @@
     "build": "hap build",
     "release": "hap release",
     "server": "hap server",
-    "watch": "hap watch"
+    "watch": "hap watch",
+    "build:test": "NODE_TEST=Y npm run build -- --devtool=source-map --enable-e2e --match-sourcemap",
+    "watch:test": "NODE_TEST=Y npm run watch -- --devtool=source-map --enable-e2e --match-sourcemap"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.12.1",
     "eslint-plugin-hybrid": "0.0.5",
     "hap-toolkit": "^0.6.8"
+  },
+  "dependencies": {
+    "hybrid-chai": "0.0.1",
+    "hybrid-mocha": "0.0.1"
   }
 }

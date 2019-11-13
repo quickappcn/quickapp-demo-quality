@@ -14,14 +14,14 @@
     { "origin": "*" }
   ],
   "config": {
-    "logLevel": "log",
-    "data": {
-      "back": false
-    }
+    "logLevel": "log"
   },
   "router": {
-    "entry": "Demo",
+    "entry": "Summary",
     "pages": {
+      "Summary": {
+        "component": "index"
+      },
       "Demo": {
         "component": "index"
       },

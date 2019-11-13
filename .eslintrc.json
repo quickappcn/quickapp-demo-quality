@@ -19,7 +19,11 @@
     "setTimeout": false,
     "clearTimeout": false,
     "setInterval": false,
-    "clearInterval": false
+    "clearInterval": false,
+    "describe": false,
+    "it": false,
+    "asserts": false,
+    "expect": false
   },
   "plugins": [
     "hybrid"

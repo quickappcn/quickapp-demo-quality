@@ -10,11 +10,6 @@
 最新运行效果请以该示例项目为主，官方文档可能代码描述的更新不及时；
 
 
-## 效果
-
-![](https://doc.quickapp.cn/tutorial/others/img/testing-41.gif)
-
-
 ## 参考
 
 [官方文档](https://doc.quickapp.cn/tutorial/others/testing.html)

@@ -20,7 +20,7 @@
     "hap-toolkit": "^0.6.8"
   },
   "dependencies": {
-    "hybrid-chai": "0.0.1",
-    "hybrid-mocha": "0.0.1"
+    "hybrid-chai": "^0.0.1",
+    "hybrid-mocha": "^0.0.2"
   }
 }

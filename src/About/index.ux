@@ -47,7 +47,7 @@
 export default {
   protected: {
     name: '关于',
-    icon: null
+    icon: '/Common/logo.png'
   },
   private: {
     desc: '即点即用，让你省去下载安装的步骤，立即使用各类服务',

@@ -31,8 +31,8 @@
         <text>测试的页面列表</text>
       </div>
       <div class="page-item" for="{{pageNameList}}">
-        <div class="page-item-summary" onclick="gotoPage(pageNameList[$idx], {})">
-          <text>{{$item}}</text>
+        <div class="page-item-summary" onclick="gotoPage($item.name, $item.params)">
+          <text>{{$item.title}} : {{$item.name}}</text>
         </div>
       </div>
     </div>
@@ -112,12 +112,13 @@
      */
     async startNextTestPage() {
       const pageItem = findNextTestPage()
-      console.info(`下个测试用例：${pageItem}`)
+      console.info(`下个测试用例：${pageItem.title}：${pageItem.name}`)
       if (pageItem) {
         await waitForOK(1000)
-        console.info(`开始测试页面：${pageItem}`)
+        console.info(`开始测试页面：${pageItem.title}：${pageItem.name}`)
         router.push({
-          uri: pageItem
+          uri: pageItem.name,
+          params: pageItem.params
         })
       } else {
         this.isRunningTest = false

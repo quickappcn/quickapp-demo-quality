@@ -1,14 +1,22 @@
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="demo-page">
-    <text class="title">{{text}}</text>
+    <text id="elText1" class="title" onclick="onEvtClick">{{text}}</text>
   </div>
 </template>
 
 <script>
+import storage from '@system.storage'
+
 export default {
-  private: {
-    text: '欢迎打开详情页'
+  public: {
+    text: '欢迎打开详情页',
+    // 不同的测试用例测不同的功能
+    caseTitle: null,
+    // 外部参数
+    externalString: null,
+    // 测试事件
+    dataForEventType: null
   },
   /**
    * 当用户点击菜单按钮时触发，调用app中定义的方法showMenu
@@ -16,6 +24,23 @@ export default {
    */
   onMenuPress() {
     this.$app.$def.showMenu()
+  },
+
+  onEvtClick (evt) {
+    this.dataForEventType = evt.type
+  },
+
+  invokeStorageSet () {
+    storage.set({
+      key: 'k1',
+      value: 'v1'
+    })
+  },
+  invokeStorageGet (fn) {
+    storage.get({
+      key: 'k1',
+      complete: fn
+    })
   }
 }
 </script>

@@ -46,7 +46,7 @@
  */
 export default {
   protected: {
-    name: null,
+    name: '关于',
     icon: null
   },
   private: {

@@ -115,7 +115,7 @@
       console.info(`下个测试用例：${pageItem.title}：${pageItem.name}`)
       if (pageItem) {
         await waitForOK(1000)
-        console.info(`开始测试页面：${pageItem.title}：${pageItem.name}`)
+        pageItem && console.info(`开始测试页面：${pageItem.title}：${pageItem.name}`)
         router.push({
           uri: pageItem.name,
           params: pageItem.params

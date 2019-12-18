@@ -99,6 +99,7 @@
         global.saveData('pageNameList', this.pageNameList)
         global.saveData('pageTestList', [])
 
+        this.pageTestList = []
         // 重置测试结束文本的显示状态
         this.showCompletedText = false
         // 自动跑测试下一个测试用例
@@ -112,8 +113,9 @@
      */
     async startNextTestPage() {
       const pageItem = findNextTestPage()
-      console.info(`下个测试用例：${pageItem.title}：${pageItem.name}`)
       if (pageItem) {
+        console.info(`下个测试用例：${pageItem.title}：${pageItem.name}`)
+
         await waitForOK(1000)
         console.info(`开始测试页面：${pageItem.title}：${pageItem.name}`)
         router.push({
@@ -121,8 +123,9 @@
           params: pageItem.params
         })
       } else {
-        this.isRunningTest = false
         console.info(`测试用例列表执行完毕`)
+
+        this.isRunningTest = false
         this.showCompletedText = true
         this.shouldTestAll = false
       }

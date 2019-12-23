@@ -11,16 +11,20 @@
     "server": "hap server",
     "watch": "hap watch",
     "build:test": "npm run build -- --devtool=source-map --enable-e2e --match-sourcemap",
-    "watch:test": "npm run watch -- --devtool=source-map --enable-e2e --match-sourcemap"
+    "watch:test": "npm run watch -- --devtool=source-map --enable-e2e --match-sourcemap",
+    "build:test:istanbul": "npm run build:test -- --enable-istanbul",
+    "watch:test:istanbul": "npm run watch:test -- --enable-istanbul"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.12.1",
     "eslint-plugin-hybrid": "0.0.5",
-    "hap-toolkit": "^0.6.12"
+    "hap-toolkit": "^0.6.12",
+    "istanbul-instrumenter-loader": "^3.0.1"
   },
   "dependencies": {
     "hybrid-chai": "^0.0.1",
-    "hybrid-mocha": "^0.0.2"
+    "hybrid-mocha": "^0.0.2",
+    "nyc": "^15.0.0"
   }
 }

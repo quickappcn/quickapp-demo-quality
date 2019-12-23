@@ -9,3 +9,6 @@ Thumbs.db
 *.iml
 .idea/
 .vscode/
+
+.nyc_output
+/coverage

@@ -8,6 +8,9 @@
   "features": [
     { "name": "system.prompt" },
     { "name": "system.router" },
+    { "name": "system.storage" },
+    { "name": "system.fetch" },
+    { "name": "system.prompt" },
     { "name": "system.shortcut" }
   ],
   "permissions": [

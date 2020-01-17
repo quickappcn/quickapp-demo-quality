@@ -2,7 +2,7 @@
   "name": "e2e-demo",
   "version": "1.0.0",
   "subversion": {
-    "toolkit": "0.6.8"
+    "toolkit": "0.6.12"
   },
   "description": "",
   "scripts": {
@@ -10,14 +10,14 @@
     "release": "hap release",
     "server": "hap server",
     "watch": "hap watch",
-    "build:test": "NODE_TEST=Y npm run build -- --devtool=source-map --enable-e2e --match-sourcemap",
-    "watch:test": "NODE_TEST=Y npm run watch -- --devtool=source-map --enable-e2e --match-sourcemap"
+    "build:test": "npm run build -- --devtool=source-map --enable-e2e --match-sourcemap",
+    "watch:test": "npm run watch -- --devtool=source-map --enable-e2e --match-sourcemap"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.12.1",
     "eslint-plugin-hybrid": "0.0.5",
-    "hap-toolkit": "^0.6.8"
+    "hap-toolkit": "^0.6.12"
   },
   "dependencies": {
     "hybrid-chai": "^0.0.1",

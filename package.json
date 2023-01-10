@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "hybrid-chai": "^0.0.1",
-    "hybrid-mocha": "^0.0.2",
+    "hybrid-mocha": "^0.1.1",
     "nyc": "^15.0.0"
   }
 }
